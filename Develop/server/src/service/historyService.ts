@@ -44,15 +44,15 @@ class HistoryService {
   }
 
   // private async write(cities: City[]) {}
-    }
     // TODO Define an addCity method that adds a city to the searchHistory.json file -
-   async addCity(city: string): Promise<City[]> {
-    const cities: City[] = await this.read();
-    const newCity: City = new City(city);
-    cities.push(newCity);
-    await this.write(cities);
-    return cities;
-   }
+    async addCity(city: string): Promise<City[]> {
+      const cities: City[] = await this.read();
+      const newCity: City = new City(city);
+      cities.push(newCity);
+      await this.write(cities);
+      return cities;
+    }
+  }
      // * BONUS TODO: Define a removeCity method that removes a city from the searchHistory.json file
   // async removeCity(id: string) {}
 
